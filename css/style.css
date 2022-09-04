@@ -1,0 +1,998 @@
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Regular'), url('../fonts/MullerRegular.woff2') format('woff2'), url('../fonts/MullerRegular.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Medium'), url('../fonts/MullerMedium.woff2') format('woff2'), url('../fonts/MullerMedium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller-Bold'), url('../fonts/MullerBold.woff2') format('woff2'), url('../fonts/MullerBold.woff') format('woff');
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --bgGray: #333;
+  --bgGrayText: #666;
+  --colorMain: #CC9933;
+  --bgwhite: #fff;
+  --colorActive: #A47312;
+  --linksColor: #E9C479;
+  --lightwhite: #E1E1E1;
+  --yellowFocusColor: #FFCC66;
+  --textGrayColor: #999;
+  --contactsBorder: #C4C4C4;
+}
+
+body {
+  min-width: 1200px;
+  font-family: 'Muller', sans-serif;
+  font-weight: 400;
+  background: #F1F1F1;
+}
+
+
+/* header*/
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: var(--bgGray);
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+
+/* header*/
+
+.header {
+  padding: 30px 0;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-phone {
+  font-family: 'Muller', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--bgGrayText);
+  margin-right: auto;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-phone:focus {
+  color: var(--colorMain);
+  outline: 1px solid var(--colorMain);
+}
+
+.header-phone:hover {
+  color: var(--colorMain);
+}
+
+.header-phone:active {
+  color: var(--colorActive);
+  outline: none;
+}
+
+.header-personal-area-link {
+  font-family: 'Muller', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--colorMain);
+  padding-left: 7px;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-personal-area:focus .header-personal-area-link {
+  color: var(--colorMain);
+  outline: 1px solid var(--colorMain);
+}
+
+.header-personal-area-logo path {
+  transition: fill .3s ease-in-out;
+}
+
+.header-personal-area:focus .header-personal-area-logo path {
+  fill: var(--colorMain);
+}
+
+.header-personal-area:hover .header-personal-area-link {
+  color: var(--linksColor);
+}
+
+.header-personal-area:hover .header-personal-area-logo path {
+  fill: var(--linksColor);
+}
+
+.header-personal-area:active .header-personal-area-link {
+  color: var(--colorActive);
+  outline: none;
+
+}
+
+.header-personal-area:active .header-personal-area-logo path {
+  fill: var(--colorActive);
+}
+
+
+.header-bottom {
+  display: flex;
+  width: 1170px;
+  min-height: 70px;
+  background: var(--bgwhite);
+  border: 1px solid var(--bgwhite);
+  border-radius: 15px;
+  padding: 14px 45px;
+  justify-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  min-height: 65px;
+  border-right: 1px solid var(--lightwhite);
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 40px;
+}
+
+.header-list-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-list-item {
+  transition: color 0.3s ease-in-out;
+}
+
+.header-list-item:focus {
+  color: var(--colorMain);
+  outline: 1px solid var(--colorMain);
+}
+
+.header-list-item:hover {
+  color: var(--colorMain);
+}
+
+.header-list-item:active {
+  color: var(--colorActive);
+  outline: none;
+}
+
+.header-list {
+  display: flex;
+  width: 743px;
+  flex-wrap: wrap;
+  color: var(--bgGrayText);
+  font-size: 16px;
+}
+
+.header-list-btn {
+  display: flex;
+  width: 426px;
+  justify-content: flex-end;
+}
+
+.header-button,
+.accommodation-btn,
+.form-btn,
+.contacts-btn {
+  padding: 13px 20px;
+  font-size: 16px;
+  line-height: 16px;
+  border: 1px solid var(--colorMain);
+  border-radius: 10px;
+  color: var(--colorMain);
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.header-button:focus,
+.accommodation-btn:focus,
+.form-btn:focus,
+.contacts-btn:focus {
+  background-color: var(--colorMain);
+  color: var(--bgwhite);
+  outline: none;
+}
+
+.header-button:hover,
+.accommodation-btn:hover,
+.form-btn:hover,
+.contacts-btn:hover {
+  background-color: var(--colorMain);
+  color: var(--bgwhite);
+}
+
+.header-button:active,
+.accommodation-btn:active,
+.form-btn:active,
+.contacts-btn:active {
+  background-color: var(--colorActive);
+  color: var(--bgwhite);
+}
+
+.header-list-btn button:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+/* specialooffers*/
+
+.specialoffers {
+  min-height: 600px;
+}
+
+.specialoffers-left {
+  width: 573px;
+  min-height: 540px;
+  margin-right: 23px;
+}
+
+.specialoffers-Maldives {
+  width: 573px;
+  min-height: 258px;
+
+
+  background-image: url(../img/darken.png), url(../img/specialoffers-1.jpg);
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 40px 234px 40px 40px;
+  margin-bottom: 23px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.specialoffers-content {
+  display: flex;
+}
+
+.specialoffers-Crete {
+  width: 573px;
+  min-height: 258px;
+  background-image: url(../img/darken.png), url(../img/specialoffers-2.jpg);
+  overflow: hidden;
+  padding: 40px 234px 40px 40px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.specialoffers-right {
+  width: 596px;
+  min-height: 540px;
+  background-image: url(../img/specialoffers-3.jpg);
+  overflow: hidden;
+  padding: 211px 234px 41px 40px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.specialoffers-list-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--bgwhite);
+}
+
+.specialoffers-price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--bgwhite);
+  opacity: 0.8;
+}
+
+.specialoffers-links {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--yellowFocusColor);
+  transition: color 0.3s ease-in-out;
+}
+
+
+.specialoffers-links:focus {
+  color: var(--yellowFocusColor);
+  outline: none;
+}
+
+.specialoffers-Maldives:focus-within {
+  outline: 1px solid var(--yellowFocusColor);
+}
+
+.specialoffers-Crete:focus-within {
+  outline: 1px solid var(--yellowFocusColor);
+}
+
+.specialoffers-right:focus-within {
+  outline: 1px solid var(--yellowFocusColor);
+}
+
+.specialoffers-links:hover {
+  color: var(--yellowFocusColor);
+}
+
+
+.specialoffers-links:active {
+  color: var(--bgwhite);
+  outline: none;
+}
+
+
+/*about*/
+
+.about-content {
+  width: 888px;
+  min-height: 180px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+
+/*services*/
+
+.services-content {
+  width: 1169px;
+  min-height: 743px;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+.services-list-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--colorMain);
+  transition: color .3s ease-in-out;
+}
+
+.services-list-item:focus-within {
+  outline: 1px solid var(--colorMain);
+}
+
+.services-list-title:focus {
+  outline: none;
+}
+
+.services-list-title:hover {
+  color: var(--linksColor);
+}
+
+.services-list-title path {
+  transition: stroke .3s ease-in-out;
+}
+
+.services-list-title:hover .services-title-link path {
+  stroke: var(--linksColor);
+}
+
+.services-list-title:active {
+  color: var(--colorActive);
+}
+
+.services-list-title:active .services-title-link path {
+  stroke: var(--colorActive);
+}
+
+.services-title-link {
+  padding-right: 20px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services-list-item {
+  width: 573px;
+  min-height: 330px;
+  transition: outline .3s ease-in-out;
+}
+
+.services-text-block {
+  width: 573px;
+  min-height: 165px;
+  background: var(--bgwhite);
+  border-radius: 0px 0px 15px 15px;
+  padding: 26px 126px 50px 45px;
+}
+
+.services-img-block {
+  margin-bottom: 0;
+  width: 573px;
+  height: 165px;
+  border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
+}
+
+.services-list-item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.services-list-item:nth-child(3n) {
+  margin-bottom: 0;
+}
+
+
+/*benefits*/
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.benefits-list-item {
+  width: 275px;
+  min-height: 275px;
+  background-color: var(--bgwhite);
+  padding: 40px 42px 41px 45px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+.benefits-list-item:nth-child(5n),
+.benefits-list-item:nth-child(6n),
+.benefits-list-item:nth-child(7n),
+.benefits-list-item:nth-child(8n) {
+  margin-bottom: 0;
+}
+
+.benefits-list-img-first {
+  background-image: url(../img/bathtub.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-second {
+  background-image: url(../img/hanger.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-third {
+  background-image: url(../img/heating.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-fourth {
+  background-image: url(../img/hotel-key.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-fifth {
+  background-image: url(../img/parking.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-sixth {
+  background-image: url(../img/reception.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-seventh {
+  background-image: url(../img/security-box.svg);
+  width: 64px;
+  height: 66px;
+}
+
+.benefits-list-img-eight {
+  background-image: url(../img/swimming-pool.svg);
+  width: 64px;
+  height: 66px;
+}
+
+
+/*accommodation*/
+
+.accommodation-content {
+  width: 1169px;
+  min-height: 1436px;
+}
+
+.accommodation-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accommodation-list-item:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+
+.accommodation-list-item:last-child {
+  margin-right: 0;
+}
+
+.accommodation-list-item {
+  width: 374px;
+  min-height: 440px;
+  margin-bottom: 23px;
+}
+
+.accommodation-list-item:nth-child(7n),
+.accommodation-list-item:nth-child(8n),
+.accommodation-list-item:nth-child(9n) {
+  margin-bottom: 0;
+}
+
+.accommodation-link {
+  font-family: 'Muller-medium', sans-serif;
+  font-weight: 500;
+}
+
+.services-list-title {
+  font-family: 'Muller', sans-serif;
+  font-weight: 500;
+}
+
+.accomodation-price-second {
+  font-family: 'Muller', sans-serif;
+  font-weight: bold;
+}
+
+.accomodation-img-block {
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
+  height: 217px;
+}
+
+.accommodation-text-block {
+  width: 374px;
+  min-height: 223px;
+  background: var(--bgwhite);
+  border-radius: 0px 0px 15px 15px;
+  padding: 36px 46px 41px 45px;
+}
+
+.accommodation-price,
+.accomodation-rating {
+  display: inline-block;
+}
+
+.accomodation-price-first {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--textGrayColor);
+}
+
+.accomodation-price-third {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.accommodation-place {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.accommodation-place-rus {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--textGrayColor);
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.accommodation-last {
+  display: flex;
+  background: url(../img/41.jpg);
+  width: 374px;
+  min-height: 440px;
+  overflow: hidden;
+  border-radius: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: var(--bgwhite);
+  align-items: flex-end;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  position: relative;
+}
+
+.accommodation-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.accomodation-price-rating {
+  font-size: 16px;
+  display: inline-block;
+  min-height: 20px;
+  margin-bottom: 16px;
+}
+
+.accomodation-price-rating p {
+  margin: 0;
+}
+
+.accommodation-link {
+  background-image: url(../img/accom-arrow.svg);
+  background-position: right center;
+  background-size: 11px 11px;
+  background-repeat: no-repeat;
+  padding-right: 20px;
+}
+
+/*form*/
+
+.form-content {
+  padding: 38px 45px 71px 40px;
+  background-color: #E9E9E9;
+  border-radius: 15px;
+}
+
+.form-group {
+  width: 1080px;
+  background-color: var(--bgwhite);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.form-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-txt {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 15px;
+}
+
+.form-label-select-city,
+.form-label-select-country,
+.form-label-input-date,
+.form-label-input-nights,
+.form-label-input-tourists {
+  border-right: 1px solid var(--lightwhite);
+  padding: 0 20px;
+}
+
+.form-city {
+  width: 169px;
+  height: 16px;
+  border: none;
+}
+
+.form-country {
+  width: 169px;
+  height: 16px;
+  border: none;
+}
+
+.form-date {
+  width: 140px;
+  height: 16px;
+  border: none;
+}
+
+.form-nights,
+.form-tourists {
+  width: 121px;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+  ;
+}
+
+.contacts-content {
+  display: flex;
+  padding: 44px 44px 46px 46px;
+  background-color: var(--bgwhite);
+  justify-content: space-between;
+}
+
+.contacts-titles {
+  display: inline;
+  margin: 0;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 20px;
+}
+
+.contacts-txt {
+  display: inline;
+  width: 229px;
+  margin: 0;
+  text-align: right;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+}
+
+.contacts-adress {
+  width: 375px;
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--contactsBorder);
+}
+
+.contacts-phone {
+  padding: 25px 0;
+  width: 375px;
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 78px;
+  border-bottom: 1px solid var(--contactsBorder);
+}
+
+.contacts-link-phones,
+.footer-link-phones {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-links,
+.footer-links {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--colorMain);
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.contacts-links:focus,
+.footer-links:focus {
+  color: var(--colorMain);
+  outline: 1px solid var(--colorMain);
+}
+
+.contacts-links:hover,
+.footer-links:hover {
+  color: #E9C379;
+}
+
+.contacts-links:active,
+.footer-links:active {
+  color: var(--colorActive);
+  outline: none;
+}
+
+.contacts-mail-links {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+}
+
+.contacts-mail {
+  width: 375px;
+  min-height: 72px;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--contactsBorder);
+}
+
+.contacts-mail-txt {
+  margin: 0;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--textGrayColor);
+}
+
+.contacts-schedule {
+  width: 375px;
+  min-height: 72px;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--contactsBorder);
+}
+
+.contacts-schedule-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-schedule-txt {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  width: 214px;
+  margin: 0;
+  padding-right: 16px;
+  color: #000000;
+}
+
+.contacts-btn {
+  margin-top: 45px;
+  padding: 27px 29px;
+}
+
+.footer-content {
+  min-height: 341px;
+  background-color: var(--bgGray);
+  border-radius: 15px;
+  padding: 44px 51px 46px 52px;
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../img/footer-logo.svg");
+  background-repeat: no-repeat;
+  background-position: 738px bottom;
+}
+
+.footer-left {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 102px;
+}
+
+.footer-text {
+  margin: 0;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 190%;
+  color: var(--bgwhite);
+}
+
+.footers-social {
+  display: flex;
+}
+
+.social-links {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.footer-adress {
+  margin-bottom: 14px;
+}
+
+.footer-link-phones {
+  margin-bottom: 15px;
+}
+
+.footer-mail-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer-social-item {
+  transition: fill .3s ease-in-out;
+}
+
+.footer-social-item:focus .social-link-trip path,
+.footer-social-item:focus .social-link-twitter path,
+.footer-social-item:focus .social-link-facebook path,
+.footer-social-item:focus .social-link-vk path,
+.footer-social-item:focus .social-link-instagram path {
+  fill: var(--colorMain);
+}
+
+.footer-social-item:hover .social-link-trip path,
+.footer-social-item:hover .social-link-twitter path,
+.footer-social-item:hover .social-link-facebook path,
+.footer-social-item:hover .social-link-vk path,
+.footer-social-item:hover .social-link-instagram path {
+  fill: var(--colorMain);
+}
+
+.footer-social-item:active .social-link-trip path,
+.footer-social-item:active .social-link-twitter path,
+.footer-social-item:active .social-link-facebook path,
+.footer-social-item:active .social-link-vk path,
+.footer-social-item:active .social-link-instagram path {
+  fill: var(--colorActive);
+}
